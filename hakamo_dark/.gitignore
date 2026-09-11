@@ -1,0 +1,15 @@
+# Android Studio / IntelliJ
+.idea/
+*.iml
+# Local SDK configuration
+local.properties
+# Build outputs
+.gradle/
+build/
+app/build/
+# OS files
+.DS_Store
+Thumbs.db
+# Secrets
+*.jks
+*.keystore

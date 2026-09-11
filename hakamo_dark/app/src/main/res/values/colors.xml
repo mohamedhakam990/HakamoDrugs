@@ -1,0 +1,14 @@
+<resources>
+    <color name="hakamo_primary">#4E7BFF</color>
+    <color name="hakamo_primary_dark">#172B68</color>
+    <color name="hakamo_accent">#67D9FF</color>
+    <color name="hakamo_bg">#080D18</color>
+    <color name="hakamo_bg_2">#0D1424</color>
+    <color name="hakamo_card">#111A2B</color>
+    <color name="hakamo_text">#F5F7FF</color>
+    <color name="hakamo_muted">#9AA8C0</color>
+    <color name="hakamo_glass">#261E2D4D</color>
+    <color name="hakamo_glass_strong">#38273A5C</color>
+    <color name="hakamo_stroke">#3B4B6B</color>
+    <color name="hakamo_divider">#24314A</color>
+</resources>

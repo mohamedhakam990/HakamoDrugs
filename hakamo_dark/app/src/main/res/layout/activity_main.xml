@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@drawable/app_background" android:layoutDirection="rtl">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="74dp" android:gravity="center_vertical"
+        android:paddingStart="14dp" android:paddingEnd="14dp" android:background="#101A2C">
+        <ImageButton android:id="@+id/btnHeaderFav" android:layout_width="48dp" android:layout_height="48dp"
+            android:background="@android:color/transparent" android:src="@drawable/ic_heart" android:padding="9dp" android:contentDescription="المفضلة"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hakamo Drugs" android:textColor="@color/hakamo_primary" android:textSize="23sp" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="دليلك الدوائي الشامل" android:textColor="@color/hakamo_muted" android:textSize="9sp"/>
+        </LinearLayout>
+        <ImageButton android:id="@+id/btnHeaderMenu" android:layout_width="48dp" android:layout_height="48dp"
+            android:background="@android:color/transparent" android:src="@drawable/ic_more" android:padding="9dp" android:contentDescription="القائمة"/>
+    </LinearLayout>
+
+    <ScrollView android:id="@+id/contentScroll" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true" android:scrollbars="none">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:paddingBottom="30dp">
+
+            <LinearLayout android:id="@+id/showcase" android:layout_width="match_parent" android:layout_height="122dp" android:gravity="center_vertical" android:padding="16dp" android:background="@drawable/detail_hero">
+                <ImageView android:layout_width="82dp" android:layout_height="82dp" android:src="@drawable/hakamo_logo" android:scaleType="centerInside"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="end" android:orientation="vertical" android:layout_marginEnd="12dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Hakamo Drugs" android:textColor="#FFFFFF" android:textSize="23sp" android:textStyle="bold" android:textAlignment="viewEnd"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="دليلك الدوائي المصري" android:textColor="#DCE6FF" android:textSize="15sp" android:textAlignment="viewEnd"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="بحث سريع • أسعار • صور • معلومات" android:textColor="#AFC4FF" android:textSize="9sp" android:textAlignment="viewEnd"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="64dp" android:layout_marginTop="14dp" android:orientation="horizontal" android:gravity="center_vertical" android:padding="7dp" android:background="@drawable/glass_search">
+                <ImageView android:layout_width="50dp" android:layout_height="50dp" android:padding="11dp" android:src="@drawable/ic_search" android:background="@drawable/search_icon"/>
+                <EditText android:id="@+id/search" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:hint="ابحث عن اسم الدواء..." android:singleLine="true" android:background="@android:color/transparent" android:paddingStart="12dp" android:paddingEnd="12dp" android:textColor="@color/hakamo_text" android:textColorHint="#71809A" android:textSize="18sp" android:textAlignment="viewEnd"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginTop="12dp" android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="تصفية النتائج" android:textColor="@color/hakamo_muted" android:textSize="10sp"/>
+                <Spinner android:id="@+id/category" android:layout_width="190dp" android:layout_height="42dp" android:background="@drawable/glass_spinner" android:paddingStart="10dp" android:paddingEnd="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="استكشف التطبيق" android:textColor="@color/hakamo_text" android:textSize="19sp" android:textStyle="bold" android:textAlignment="viewEnd"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="خدمات سريعة" android:textColor="@color/hakamo_muted" android:textSize="10sp"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="86dp" android:layout_marginTop="9dp" android:orientation="horizontal">
+                <Button android:id="@+id/btnFav" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="4dp" android:text="المفضلة" android:textAllCaps="false" android:textColor="@color/hakamo_text" android:textSize="10sp" android:drawableTop="@drawable/ic_heart" android:background="@drawable/glass_tile"/>
+                <Button android:id="@+id/btnCategories" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="4dp" android:layout_marginEnd="4dp" android:text="الأقسام" android:textAllCaps="false" android:textColor="@color/hakamo_text" android:textSize="10sp" android:drawableTop="@drawable/ic_grid" android:background="@drawable/glass_tile"/>
+                <Button android:id="@+id/btnIngredients" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="4dp" android:text="المواد الفعالة" android:textAllCaps="false" android:textColor="@color/hakamo_text" android:textSize="9sp" android:drawableTop="@drawable/ic_ingredient" android:background="@drawable/glass_tile"/>
+            </LinearLayout>
+
+            <Button android:id="@+id/btnOnline" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="المصادر الرسمية للدواء  ›" android:textAllCaps="false" android:textColor="@color/hakamo_primary" android:textSize="12sp" android:textStyle="bold" android:background="@drawable/official_new"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="اضغط على الدواء لعرض التفاصيل" android:textColor="@color/hakamo_muted" android:textSize="9sp"/>
+                <TextView android:id="@+id/drugsHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="الأدوية" android:textColor="@color/hakamo_text" android:textSize="22sp" android:textStyle="bold"/>
+            </LinearLayout>
+            <TextView android:id="@+id/count" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:textColor="@color/hakamo_primary" android:textSize="10sp" android:textAlignment="viewEnd"/>
+            <ListView android:id="@+id/list" android:layout_width="match_parent" android:layout_height="620dp" android:layout_marginTop="8dp" android:divider="@android:color/transparent" android:dividerHeight="9dp" android:scrollbars="none"/>
+            <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="@color/hakamo_muted" android:textSize="9sp" android:textAlignment="viewEnd"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout android:id="@+id/bottomNav" android:layout_width="match_parent" android:layout_height="76dp" android:layout_marginStart="10dp" android:layout_marginEnd="10dp" android:layout_marginBottom="8dp" android:padding="5dp" android:orientation="horizontal" android:background="@drawable/glass_nav" android:elevation="10dp">
+        <TextView android:id="@+id/navHome" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="الرئيسية" android:textColor="@color/hakamo_text" android:textSize="9sp" android:drawableTop="@drawable/ic_home" android:paddingTop="5dp" android:background="@drawable/nav_item_selector"/>
+        <TextView android:id="@+id/navDrugs" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="الأدوية" android:textColor="@color/hakamo_text" android:textSize="9sp" android:drawableTop="@drawable/ic_pill" android:paddingTop="5dp" android:background="@drawable/nav_item_selector"/>
+        <TextView android:id="@+id/navCategories" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="الأقسام" android:textColor="@color/hakamo_text" android:textSize="9sp" android:drawableTop="@drawable/ic_grid" android:paddingTop="5dp" android:background="@drawable/nav_item_selector"/>
+        <TextView android:id="@+id/navIngredients" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="المواد" android:textColor="@color/hakamo_text" android:textSize="9sp" android:drawableTop="@drawable/ic_ingredient" android:paddingTop="5dp" android:background="@drawable/nav_item_selector"/>
+        <TextView android:id="@+id/navFav" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="المفضلة" android:textColor="@color/hakamo_text" android:textSize="9sp" android:drawableTop="@drawable/ic_heart" android:paddingTop="5dp" android:background="@drawable/nav_item_selector"/>
+        <TextView android:id="@+id/navMore" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:text="المزيد" android:textColor="@color/hakamo_text" android:textSize="9sp" android:drawableTop="@drawable/ic_more" android:paddingTop="5dp" android:background="@drawable/nav_item_selector"/>
+    </LinearLayout>
+
+    <Button android:id="@+id/btnAmoled" android:layout_width="1dp" android:layout_height="1dp" android:visibility="gone"/>
+    <Button android:id="@+id/btnIndications" android:layout_width="1dp" android:layout_height="1dp" android:visibility="gone"/>
+    <Button android:id="@+id/btnPharmacies" android:layout_width="1dp" android:layout_height="1dp" android:visibility="gone"/>
+    <Button android:id="@+id/btnDownload" android:layout_width="1dp" android:layout_height="1dp" android:visibility="gone"/>
+</LinearLayout>

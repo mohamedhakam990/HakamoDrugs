@@ -1,0 +1,18 @@
+<resources>
+    <style name="AppTheme" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">@color/hakamo_primary</item>
+        <item name="android:navigationBarColor">@color/hakamo_bg</item>
+        <item name="android:statusBarColor">@color/hakamo_primary_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowBackground">@color/hakamo_bg</item>
+    </style>
+    <style name="AppTheme_Amoled" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">@color/hakamo_primary</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:statusBarColor">#050812</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowBackground">#000000</item>
+    </style>
+</resources>
